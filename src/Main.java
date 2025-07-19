@@ -10,6 +10,7 @@ import PARKING_SPACE.PPricingStrategy.hourlyPricingStrategy;
 import PARKING_SPACE.PPricingStrategy.pricingStrategy;
 import PARKING_SPACE.PVehicle.*;
 import PARKING_SPACE.*;
+import TicTacToe.Game;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -21,35 +22,38 @@ public class Main {
 //        sbiAtm.cashWithraw();
 //        sbiAtm.collectMoney();
         //Parking Spot
-        parkingSpotFactory ParkingSpotFactory =new parkingSpotFactory();
-        parkingLot ParkingLot1=new twoWheelerParkingLot();
-        parkingLot ParkingLot2=new fourWheelerParkingLot();
-        parkingLot ParkingLot3=new sixWheelerParkingLot();
-        ParkingLot1.VehicleType=vehicleType.twoWheeler;
-        ParkingLot2.VehicleType=vehicleType.fourWheeler;
-        ParkingLot3.VehicleType=vehicleType.sixWheeler;
-        ParkingLot1.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.twoWheeler));
-        ParkingLot1.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.twoWheeler));
-        ParkingLot1.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.twoWheeler));
-        ParkingLot2.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.fourWheeler));
-        ParkingLot2.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.fourWheeler));
-        ParkingLot2.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.fourWheeler));
-        ParkingLot3.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.sixWheeler));
-        ParkingLot3.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.sixWheeler));
-        ParkingLot3.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.sixWheeler));
-        parkingManager ParkingManager=new parkingManager();
-        ParkingManager.AddParkingLot(ParkingLot1);
-        ParkingManager.AddParkingLot(ParkingLot2);
-        ParkingManager.AddParkingLot(ParkingLot3);
-        entryGate EntryGate=new entryGate(ParkingManager);
-        vehicle alto=new car("1");
-        pricingStrategy PricingStrategy=new hourlyPricingStrategy();
-        ticket Ticket=EntryGate.GenerateTicket(alto,PricingStrategy);
-        exitGate ExitGate=new exitGate(ParkingManager);
-        Integer amount=ExitGate.SubmitTicket(Ticket);
-        Boolean status=ExitGate.pay(amount,new creditCard());
-        System.out.println(status);
+//        parkingSpotFactory ParkingSpotFactory =new parkingSpotFactory();
+//        parkingLot ParkingLot1=new twoWheelerParkingLot();
+//        parkingLot ParkingLot2=new fourWheelerParkingLot();
+//        parkingLot ParkingLot3=new sixWheelerParkingLot();
+//        ParkingLot1.VehicleType=vehicleType.twoWheeler;
+//        ParkingLot2.VehicleType=vehicleType.fourWheeler;
+//        ParkingLot3.VehicleType=vehicleType.sixWheeler;
+//        ParkingLot1.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.twoWheeler));
+//        ParkingLot1.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.twoWheeler));
+//        ParkingLot1.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.twoWheeler));
+//        ParkingLot2.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.fourWheeler));
+//        ParkingLot2.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.fourWheeler));
+//        ParkingLot2.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.fourWheeler));
+//        ParkingLot3.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.sixWheeler));
+//        ParkingLot3.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.sixWheeler));
+//        ParkingLot3.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.sixWheeler));
+//        parkingManager ParkingManager=new parkingManager();
+//        ParkingManager.AddParkingLot(ParkingLot1);
+//        ParkingManager.AddParkingLot(ParkingLot2);
+//        ParkingManager.AddParkingLot(ParkingLot3);
+//        entryGate EntryGate=new entryGate(ParkingManager);
+//        vehicle alto=new car("1");
+//        pricingStrategy PricingStrategy=new hourlyPricingStrategy();
+//        ticket Ticket=EntryGate.GenerateTicket(alto,PricingStrategy);
+//        exitGate ExitGate=new exitGate(ParkingManager);
+//        Integer amount=ExitGate.SubmitTicket(Ticket);
+//        Boolean status=ExitGate.pay(amount,new creditCard());
+//        System.out.println(status);
 
+        //TicTacToe
+        Game game=Game.GetInstance();
+        game.play();
 
 
 
