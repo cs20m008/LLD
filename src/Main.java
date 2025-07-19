@@ -1,8 +1,13 @@
 import ATM.atmContext;
+import PARKING_SPACE.PParkingLot.fourWheelerParkingLot;
 import PARKING_SPACE.PParkingLot.parkingLot;
+import PARKING_SPACE.PParkingLot.sixWheelerParkingLot;
 import PARKING_SPACE.PParkingLot.twoWheelerParkingLot;
 import PARKING_SPACE.PParkingSpot.parkingSpot;
 import PARKING_SPACE.PParkingSpot.parkingSpotFactory;
+import PARKING_SPACE.PPaymentStrategy.creditCard;
+import PARKING_SPACE.PPricingStrategy.hourlyPricingStrategy;
+import PARKING_SPACE.PPricingStrategy.pricingStrategy;
 import PARKING_SPACE.PVehicle.*;
 import PARKING_SPACE.*;
 
@@ -18,18 +23,35 @@ public class Main {
         //Parking Spot
         parkingSpotFactory ParkingSpotFactory =new parkingSpotFactory();
         parkingLot ParkingLot1=new twoWheelerParkingLot();
+        parkingLot ParkingLot2=new fourWheelerParkingLot();
+        parkingLot ParkingLot3=new sixWheelerParkingLot();
+        ParkingLot1.VehicleType=vehicleType.twoWheeler;
+        ParkingLot2.VehicleType=vehicleType.fourWheeler;
+        ParkingLot3.VehicleType=vehicleType.sixWheeler;
         ParkingLot1.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.twoWheeler));
         ParkingLot1.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.twoWheeler));
         ParkingLot1.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.twoWheeler));
+        ParkingLot2.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.fourWheeler));
+        ParkingLot2.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.fourWheeler));
+        ParkingLot2.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.fourWheeler));
+        ParkingLot3.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.sixWheeler));
+        ParkingLot3.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.sixWheeler));
+        ParkingLot3.AddParkingSpot(ParkingSpotFactory.GenerateParkingSpot(vehicleType.sixWheeler));
+        parkingManager ParkingManager=new parkingManager();
+        ParkingManager.AddParkingLot(ParkingLot1);
+        ParkingManager.AddParkingLot(ParkingLot2);
+        ParkingManager.AddParkingLot(ParkingLot3);
+        entryGate EntryGate=new entryGate(ParkingManager);
+        vehicle alto=new car("1");
+        pricingStrategy PricingStrategy=new hourlyPricingStrategy();
+        ticket Ticket=EntryGate.GenerateTicket(alto,PricingStrategy);
+        exitGate ExitGate=new exitGate(ParkingManager);
+        Integer amount=ExitGate.SubmitTicket(Ticket);
+        Boolean status=ExitGate.pay(amount,new creditCard());
+        System.out.println(status);
 
-        vehicle Splender=new bike("1");
-        Boolean x=ParkingLot1.GenerateParkingSpot();
-        vehicle Bmw =new bike("2");
-        Boolean y=ParkingLot1.GenerateParkingSpot();
-        vehicle Ktm =new bike("3");
-        Boolean z=ParkingLot1.GenerateParkingSpot();
-        vehicle Passion =new bike("4");
-        Boolean a=ParkingLot1.GenerateParkingSpot();
+
+
 
 
 

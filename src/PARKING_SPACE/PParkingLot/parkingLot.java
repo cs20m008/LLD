@@ -2,10 +2,12 @@ package PARKING_SPACE.PParkingLot;
 
 
 import PARKING_SPACE.PParkingSpot.parkingSpot;
+import PARKING_SPACE.vehicleType;
 
 import java.util.*;
 
 public abstract class parkingLot {
+   public vehicleType VehicleType;
    List<parkingSpot>ParkingSpots=new ArrayList<>();
    HashSet<parkingSpot>FreeParkingSpots=new HashSet<>();
    public parkingLot() {
@@ -15,17 +17,21 @@ public abstract class parkingLot {
       ParkingSpots.add(ParkingSpot);
       FreeParkingSpots.add(ParkingSpot);
    }
-   public Boolean GenerateParkingSpot()
+   public void AddFreeParkingSpot(parkingSpot ParkingSpot)
+   {
+      FreeParkingSpots.add(ParkingSpot);
+   }
+   public parkingSpot AvailableParkingSpot()
    {
       if(!FreeParkingSpots.isEmpty())
       {
          Optional<parkingSpot> parkingSpot1=FreeParkingSpots.stream().findFirst();
          if(parkingSpot1.isPresent()) {
             FreeParkingSpots.remove(parkingSpot1.get());
-            return true;
+            return parkingSpot1.get();
          }
       }
-      return false;
+      return null;
    }
 
 
