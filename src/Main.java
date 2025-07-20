@@ -12,6 +12,7 @@ import PARKING_SPACE.PVehicle.*;
 import PARKING_SPACE.*;
 import TicTacToe.Game;
 
+import static CouponSystem.App.CouponSystemMain;
 import static PizzaFactory.app.PizzaMain;
 
 public class Main {
@@ -57,7 +58,9 @@ public class Main {
 //        Game game=Game.GetInstance();
 //        game.play();
         //Pizza
-        PizzaMain();
+//        PizzaMain();
+        //CouponSystem
+        CouponSystemMain();
 
 
 
