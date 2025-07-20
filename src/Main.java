@@ -14,6 +14,7 @@ import TicTacToe.Game;
 
 import static AmazonNotificationSystem.App.amazonNotificationSystemMain;
 import static CouponSystem.App.CouponSystemMain;
+import static InventoryManagementSystem.App.inventoryManagementSystemMain;
 import static PizzaFactory.app.PizzaMain;
 import static VendingMachine.App.vendingMachineMain;
 
@@ -66,7 +67,9 @@ public class Main {
         //AmazonNotificationSystem
 //        amazonNotificationSystemMain();
         //VendingMachine
-        vendingMachineMain();
+//          vendingMachineMain();
+        //InventoryManagementSystem
+        inventoryManagementSystemMain();
 
 
 
