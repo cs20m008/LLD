@@ -12,6 +12,7 @@ import PARKING_SPACE.PVehicle.*;
 import PARKING_SPACE.*;
 import TicTacToe.Game;
 
+import static AmazonNotificationSystem.App.amazonNotificationSystemMain;
 import static CouponSystem.App.CouponSystemMain;
 import static PizzaFactory.app.PizzaMain;
 
@@ -59,8 +60,10 @@ public class Main {
 //        game.play();
         //Pizza
 //        PizzaMain();
-        //CouponSystem
-        CouponSystemMain();
+       //CouponSystem
+//        CouponSystemMain();
+        //AmazonNotificationSystem
+        amazonNotificationSystemMain();
 
 
 
