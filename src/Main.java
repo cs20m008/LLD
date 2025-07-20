@@ -15,6 +15,7 @@ import TicTacToe.Game;
 import static AmazonNotificationSystem.App.amazonNotificationSystemMain;
 import static CouponSystem.App.CouponSystemMain;
 import static PizzaFactory.app.PizzaMain;
+import static VendingMachine.App.vendingMachineMain;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -63,7 +64,9 @@ public class Main {
        //CouponSystem
 //        CouponSystemMain();
         //AmazonNotificationSystem
-        amazonNotificationSystemMain();
+//        amazonNotificationSystemMain();
+        //VendingMachine
+        vendingMachineMain();
 
 
 
