@@ -12,6 +12,8 @@ import PARKING_SPACE.PVehicle.*;
 import PARKING_SPACE.*;
 import TicTacToe.Game;
 
+import static PizzaFactory.app.PizzaMain;
+
 public class Main {
     public static void main(String[] args) throws Exception {
         //ATM
@@ -52,8 +54,10 @@ public class Main {
 //        System.out.println(status);
 
         //TicTacToe
-        Game game=Game.GetInstance();
-        game.play();
+//        Game game=Game.GetInstance();
+//        game.play();
+        //Pizza
+        PizzaMain();
 
 
 
