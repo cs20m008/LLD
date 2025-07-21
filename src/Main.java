@@ -14,6 +14,7 @@ import TicTacToe.Game;
 
 import static ATMDispenser.App.ATMDispenserMain;
 import static AmazonNotificationSystem.App.amazonNotificationSystemMain;
+import static AuctionManagementSystem.App.auctionManagementSystemMain;
 import static CouponSystem.App.CouponSystemMain;
 import static DirectorySystem.App.directorySystemMain;
 import static InventoryManagementSystem.App.inventoryManagementSystemMain;
@@ -78,7 +79,10 @@ public class Main {
         //ATMDispenser
 //        ATMDispenserMain();
         //directorySystem
-        directorySystemMain();
+//        directorySystemMain();
+        //auctionManagementSystem
+        auctionManagementSystemMain();
+
 
 
 
