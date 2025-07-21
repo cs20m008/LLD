@@ -12,6 +12,7 @@ import PARKING_SPACE.PVehicle.*;
 import PARKING_SPACE.*;
 import TicTacToe.Game;
 
+import static ATMDispenser.App.ATMDispenserMain;
 import static AmazonNotificationSystem.App.amazonNotificationSystemMain;
 import static CouponSystem.App.CouponSystemMain;
 import static InventoryManagementSystem.App.inventoryManagementSystemMain;
@@ -71,7 +72,11 @@ public class Main {
 //          vendingMachineMain();
         //InventoryManagementSystem
 //        inventoryManagementSystemMain();
-        snakeAndLadderGameMain();
+//        snakeAndLadderGame
+//        snakeAndLadderGameMain();
+        //ATMDispenser
+        ATMDispenserMain();
+
 
 
 
