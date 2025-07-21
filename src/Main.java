@@ -16,6 +16,7 @@ import static AmazonNotificationSystem.App.amazonNotificationSystemMain;
 import static CouponSystem.App.CouponSystemMain;
 import static InventoryManagementSystem.App.inventoryManagementSystemMain;
 import static PizzaFactory.app.PizzaMain;
+import static SnakeAndLadderGame.App.snakeAndLadderGameMain;
 import static VendingMachine.App.vendingMachineMain;
 
 public class Main {
@@ -69,7 +70,8 @@ public class Main {
         //VendingMachine
 //          vendingMachineMain();
         //InventoryManagementSystem
-        inventoryManagementSystemMain();
+//        inventoryManagementSystemMain();
+        snakeAndLadderGameMain();
 
 
 
