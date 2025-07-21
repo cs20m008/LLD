@@ -15,6 +15,7 @@ import TicTacToe.Game;
 import static ATMDispenser.App.ATMDispenserMain;
 import static AmazonNotificationSystem.App.amazonNotificationSystemMain;
 import static CouponSystem.App.CouponSystemMain;
+import static DirectorySystem.App.directorySystemMain;
 import static InventoryManagementSystem.App.inventoryManagementSystemMain;
 import static PizzaFactory.app.PizzaMain;
 import static SnakeAndLadderGame.App.snakeAndLadderGameMain;
@@ -75,7 +76,9 @@ public class Main {
 //        snakeAndLadderGame
 //        snakeAndLadderGameMain();
         //ATMDispenser
-        ATMDispenserMain();
+//        ATMDispenserMain();
+        //directorySystem
+        directorySystemMain();
 
 
 
