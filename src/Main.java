@@ -23,6 +23,7 @@ import static MultipleProducerConsumer.App.multipleProducerConsumerMain;
 import static PizzaFactory.app.PizzaMain;
 import static SimpleProducerConsumer.App.simpleProducerConsumerMain;
 import static SnakeAndLadderGame.App.snakeAndLadderGameMain;
+import static Uber.App.UberAppMain;
 import static VendingMachine.App.vendingMachineMain;
 
 public class Main {
@@ -93,6 +94,7 @@ public class Main {
         // simpleProducerConsumerMain();
 //        multipleProducerConsumerMain();
         //GPay
+        UberAppMain();
 
 
 
