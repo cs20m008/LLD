@@ -15,10 +15,12 @@ import TicTacToe.Game;
 import static ATMDispenser.App.ATMDispenserMain;
 import static AmazonNotificationSystem.App.amazonNotificationSystemMain;
 import static AuctionManagementSystem.App.auctionManagementSystemMain;
+import static CoffeeShopSystem.App.coffeeShopSystemMain;
 import static CouponSystem.App.CouponSystemMain;
 import static DirectorySystem.App.directorySystemMain;
 import static InventoryManagementSystem.App.inventoryManagementSystemMain;
 import static PizzaFactory.app.PizzaMain;
+import static SimpleProducerConsumer.App.simpleProducerConsumerMain;
 import static SnakeAndLadderGame.App.snakeAndLadderGameMain;
 import static VendingMachine.App.vendingMachineMain;
 
@@ -81,8 +83,13 @@ public class Main {
         //directorySystem
 //        directorySystemMain();
         //auctionManagementSystem
-        auctionManagementSystemMain();
-
+//        auctionManagementSystemMain();
+        //simpleProducerConsumer
+       // simpleProducerConsumerMain();
+        //CoffeeShopSystem
+//        coffeeShopSystemMain();
+        //simpleProducerConsumerMain
+        simpleProducerConsumerMain();
 
 
 
