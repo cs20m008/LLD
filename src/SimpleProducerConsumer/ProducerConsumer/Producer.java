@@ -18,12 +18,6 @@ public class Producer implements Runnable{
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-//                try {
-//                    System.out.println("sleep "+i);
-//                    Thread.sleep(1000);
-//                } catch (InterruptedException e) {
-//                    throw new RuntimeException(e);
-//                }
 
             }
         }

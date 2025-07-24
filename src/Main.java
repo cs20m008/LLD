@@ -19,6 +19,7 @@ import static CoffeeShopSystem.App.coffeeShopSystemMain;
 import static CouponSystem.App.CouponSystemMain;
 import static DirectorySystem.App.directorySystemMain;
 import static InventoryManagementSystem.App.inventoryManagementSystemMain;
+import static MultipleProducerConsumer.App.multipleProducerConsumerMain;
 import static PizzaFactory.app.PizzaMain;
 import static SimpleProducerConsumer.App.simpleProducerConsumerMain;
 import static SnakeAndLadderGame.App.snakeAndLadderGameMain;
@@ -89,7 +90,8 @@ public class Main {
         //CoffeeShopSystem
 //        coffeeShopSystemMain();
         //simpleProducerConsumerMain
-        simpleProducerConsumerMain();
+        // simpleProducerConsumerMain();
+        multipleProducerConsumerMain();
 
 
 
